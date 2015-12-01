@@ -1,0 +1,21 @@
+addEventHandler( "onClientRender", root,
+    function()
+        if myImage then
+          dxDrawImage( 0, 0, 1920, 1080, myImage  )
+        end
+    end
+)
+ 
+-- Use 'i' bind to switch image on and off
+
+
+myImage = dxCreateTexture( "cw.png" )  -- Create image
+
+bindKey( "i" , "down",
+    function()   
+            destroyElement( myImage )                 -- Destroy image
+            myImage = nil
+        
+		
+    end
+)
