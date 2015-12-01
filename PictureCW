@@ -6,14 +6,14 @@ addEventHandler( "onClientRender", root,
     end
 )
  
--- Use 'i' bind to switch image on and off
+--
 
 
 myImage = dxCreateTexture( "cw.png" )  -- Create image
 
 bindKey( "i" , "down",
     function()   
-            destroyElement( myImage )                 -- Destroy image
+            destroyElement( myImage )               
             myImage = nil
         
 		
